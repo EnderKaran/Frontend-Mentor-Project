@@ -18,11 +18,11 @@ const projects = [
   {
     id: 1, 
     title: "Intro Section with Dropdown",
-    description: "Karmaşık navigasyon, açılır menüler ve responsive sidebar içeren giriş bölümü.",
+    description: "Complex navigation, dropdown menus and responsive sidebar.",
     image: introSectionImage,
     tags: ["React", "Tailwind", "Navigation"],
     internalLink: "/challenges/intro-section", 
-    repoLink: "https://github.com/kullaniciadi/intro-section-repo", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/intro-section", 
     difficulty: "Junior",
   },
 ];
@@ -37,11 +37,10 @@ function ProjectCard() {
           <span>Frontend Mentor Challenges</span>
         </div>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent">
-          Kodlama Yolculuğum
+          My Coding Journey
         </h1>
         <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
-          Frontend Mentor üzerinde çözdüğüm tasarımların koleksiyonu. 
-          HTML, CSS, JavaScript ve React ile geliştirdiğim modern arayüzler.
+          A collection of designs I've solved on Frontend Mentor. 
         </p>
       </header>
 
@@ -95,14 +94,14 @@ function ProjectCard() {
                 {/* REPO BUTTON */}
                 <Button asChild variant="outline" className="w-full border-neutral-700 hover:bg-neutral-800 hover:text-white text-neutral-300 cursor-pointer">
                   <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> Kod
+                    <Github className="mr-2 h-4 w-4" /> Code
                   </a>
                 </Button>
 
                 {/* PROJECT BUTTON */}
                 <Button asChild className="w-full bg-indigo-600 hover:bg-indigo-700 text-white border-0 cursor-pointer">
                   <Link to={project.internalLink}>
-                    <Eye className="mr-2 h-4 w-4" /> Sayfaya Git
+                    <Eye className="mr-2 h-4 w-4" /> Go to Page
                   </Link>
                 </Button>
               </CardFooter>
