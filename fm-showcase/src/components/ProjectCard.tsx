@@ -112,7 +112,7 @@ function ProjectCard() {
       
       {/* FOOTER */}
       <footer className="border-t border-neutral-800 py-8 text-center text-neutral-500 text-sm">
-        <p>© {new Date().getFullYear()} Frontend Mentor Portfolio. React & Shadcn UI ile yapıldı.</p>
+        <p>© {new Date().getFullYear()} Frontend Mentor Portfolio. Built with React & Shadcn UI.</p>
       </footer>
     </div>
   );
