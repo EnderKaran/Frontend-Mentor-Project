@@ -11,12 +11,15 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+//images
+import introSectionImage from "../challenges/intro-section/intro-section-images/desktop-design.jpg";
+
 const projects = [
   {
     id: 1, 
     title: "Intro Section with Dropdown",
     description: "Karmaşık navigasyon, açılır menüler ve responsive sidebar içeren giriş bölümü.",
-    image: "/images/intro-section/image-hero-desktop.png",
+    image: introSectionImage,
     tags: ["React", "Tailwind", "Navigation"],
     internalLink: "/challenges/intro-section", 
     repoLink: "https://github.com/kullaniciadi/intro-section-repo", 

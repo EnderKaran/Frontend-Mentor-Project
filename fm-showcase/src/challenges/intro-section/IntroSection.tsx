@@ -8,6 +8,12 @@ import { Button } from "@/components/ui/button";
 
 //images
 import databizimage from "./intro-section-images/client-databiz.svg";
+import audiophileimage from "./intro-section-images/client-audiophile.svg";
+import makerimage from "./intro-section-images/client-maker.svg";
+import meetimage from "./intro-section-images/client-meet.svg";
+import snapLogoimage from "./intro-section-images/logo.svg";
+import herodesktopimage from "./intro-section-images/image-hero-desktop.png";
+import heromobileimage from "./intro-section-images/image-hero-mobile.png";
 
 export default function IntroSection() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,7 +50,7 @@ export default function IntroSection() {
       <nav className="flex items-center justify-between p-5 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex items-center gap-16">
           {/* Logo */}
-          <h1 className="text-4xl font-bold text-[#141414] tracking-tight mt-[-5px]">snap</h1>
+          <h1 className="text-4xl font-bold text-[#141414] tracking-tight mt-[-5px]"><img src={snapLogoimage} alt="logo" /></h1>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -194,9 +200,9 @@ export default function IntroSection() {
           {/* Client Logos */}
           <div className="mt-12 md:mt-24 flex items-center justify-between gap-6 w-full max-w-[480px]">
             <img src={databizimage} alt="client" className="h-4 md:h-5 object-contain" />
-            <img src="/images/intro-section/client-audiophile.svg" alt="client" className="h-4 md:h-8 object-contain" />
-            <img src="/images/intro-section/client-meet.svg" alt="client" className="h-4 md:h-5 object-contain" />
-            <img src="/images/intro-section/client-maker.svg" alt="client" className="h-4 md:h-6 object-contain" />
+            <img src={audiophileimage} alt="client" className="h-4 md:h-8 object-contain" />
+            <img src={meetimage} alt="client" className="h-4 md:h-5 object-contain" />
+            <img src={makerimage} alt="client" className="h-4 md:h-6 object-contain" />
           </div>
         </div>
 
@@ -204,13 +210,13 @@ export default function IntroSection() {
         <div className="flex-1 w-full md:h-full flex items-center justify-center md:justify-end">
           {/* Mobile Image */}
           <img 
-             src="/images/intro-section/image-hero-mobile.png" 
+             src={heromobileimage} 
              alt="Hero Mobile" 
              className="w-full md:hidden object-contain"
           />
            {/* Desktop Image */}
            <img 
-             src="/images/intro-section/image-hero-desktop.png" 
+             src={herodesktopimage} 
              alt="Hero Desktop" 
              className="hidden md:block w-auto h-[80%] object-contain"
           />
