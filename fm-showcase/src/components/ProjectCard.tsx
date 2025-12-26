@@ -1,48 +1,119 @@
-interface ProjectCardProps {
-    title: string;
-    imageUrl: string;
-    techStack: string[];
-  }
-  
-  const ProjectCard = ({ title, imageUrl, techStack }: ProjectCardProps) => {
-    return (
-      // Kartın ana çerçevesi
-      <div className="w-full max-w-[350px] bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-default">
-        
-        {/* Görsel Alanı */}
-        <div className="h-48 overflow-hidden bg-gray-100 relative">
-          <img
-            src={imageUrl}
-            alt={title}
-            className="w-full h-full object-cover object-top"
-          />
-          {/* Görselin üzerine gelince hafif bir parlama efekti */}
-          <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
+import { Github, Eye, Code2 } from "lucide-react";
+import { Link } from "react-router-dom"; 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
+const projects = [
+  {
+    id: 1, 
+    title: "Intro Section with Dropdown",
+    description: "Karmaşık navigasyon, açılır menüler ve responsive sidebar içeren giriş bölümü.",
+    image: "/images/intro-section/image-hero-desktop.png",
+    tags: ["React", "Tailwind", "Navigation"],
+    internalLink: "/challenges/intro-section", 
+    repoLink: "https://github.com/kullaniciadi/intro-section-repo", 
+    difficulty: "Junior",
+  },
+];
+
+function ProjectCard() {
+  return (
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-indigo-500 selection:text-white">
+      {/* HEADER SECTION */}
+      <header className="container mx-auto py-16 px-4 text-center space-y-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-medium border border-indigo-500/20 mb-4">
+          <Code2 className="w-4 h-4" />
+          <span>Frontend Mentor Challenges</span>
         </div>
-  
-        {/* İçerik Alanı */}
-        <div className="p-5">
-          
-          {/* Başlık */}
-          <h3 className="text-lg font-bold text-gray-800 mb-3 leading-snug">
-            {title}
-          </h3>
-  
-          {/* Teknoloji Etiketleri */}
-          <div className="flex flex-wrap gap-2">
-            {techStack.map((tech, index) => (
-              <span
-                key={index}
-                className="px-2.5 py-1 text-[11px] font-semibold bg-blue-50 text-blue-600 rounded-md border border-blue-100 tracking-wide"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-          
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent">
+          Kodlama Yolculuğum
+        </h1>
+        <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
+          Frontend Mentor üzerinde çözdüğüm tasarımların koleksiyonu. 
+          HTML, CSS, JavaScript ve React ile geliştirdiğim modern arayüzler.
+        </p>
+      </header>
+
+      {/* GRID SECTION */}
+      <main className="container mx-auto px-4 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <Card 
+              key={project.id} 
+              className="bg-neutral-900 border-neutral-800 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 flex flex-col overflow-hidden group"
+            >
+              {/* Image Area */}
+              <div className="relative h-48 w-full bg-neutral-800 overflow-hidden">
+                {project.image ? (
+                   <img 
+                     src={project.image} 
+                     alt={project.title} 
+                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-neutral-700">
+                    <span className="text-sm">Görsel Yok</span>
+                  </div>
+                )}
+                
+                <div className="absolute top-3 right-3">
+                   <Badge variant="secondary" className="bg-black/60 backdrop-blur-md text-white border-none hover:bg-black/80">
+                      {project.difficulty}
+                   </Badge>
+                </div>
+              </div>
+
+              <CardHeader>
+                <CardTitle className="text-xl text-neutral-100">{project.title}</CardTitle>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.tags.map((tag) => (
+                    <Badge key={tag} variant="outline" className="text-neutral-400 border-neutral-700 text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </CardHeader>
+
+              <CardContent className="flex-grow">
+                <CardDescription className="text-neutral-400 leading-relaxed">
+                  {project.description}
+                </CardDescription>
+              </CardContent>
+
+              <CardFooter className="grid grid-cols-2 gap-3 pt-0">
+                {/* REPO BUTTON */}
+                <Button asChild variant="outline" className="w-full border-neutral-700 hover:bg-neutral-800 hover:text-white text-neutral-300 cursor-pointer">
+                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" /> Kod
+                  </a>
+                </Button>
+
+                {/* PROJECT BUTTON */}
+                <Button asChild className="w-full bg-indigo-600 hover:bg-indigo-700 text-white border-0 cursor-pointer">
+                  <Link to={project.internalLink}>
+                    <Eye className="mr-2 h-4 w-4" /> Sayfaya Git
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
-      </div>
-    );
-  };
-  
-  export default ProjectCard;
+      </main>
+      
+      {/* FOOTER */}
+      <footer className="border-t border-neutral-800 py-8 text-center text-neutral-500 text-sm">
+        <p>© {new Date().getFullYear()} Frontend Mentor Portfolio. React & Shadcn UI ile yapıldı.</p>
+      </footer>
+    </div>
+  );
+}
+
+export default ProjectCard;
