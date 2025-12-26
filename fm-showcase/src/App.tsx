@@ -1,5 +1,5 @@
 import './App.css'
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   
