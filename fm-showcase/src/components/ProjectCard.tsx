@@ -26,7 +26,7 @@ const projects = [
     repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/intro-section", 
     difficulty: "Junior",
   },
-    {
+  {
     id: 2,
     title: "Typing Speed Test",
     description: "Anlık doğruluk analizi, WPM hesaplama ve oyun modları içeren gelişmiş bir yazma testi uygulaması.",
@@ -35,6 +35,16 @@ const projects = [
     internalLink: "/challenges/typing-speed-test",
     repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/typing-speed-test",
     difficulty: "Junior",
+  },
+  {
+    id: 3,
+    title: "Weather app",
+    description: "Anlık doğruluk analizi, WPM hesaplama ve oyun modları içeren gelişmiş bir yazma testi uygulaması.",
+    image: typingSectionImage,
+    tags: ["React", "State Logic", "Algorithms"],
+    internalLink: "/challenges/weather-app",
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/typing-speed-test",
+    difficulty: "Intermediate",
   },
 ];
 
