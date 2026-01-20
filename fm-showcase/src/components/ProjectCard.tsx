@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 //images
 import introSectionImage from "../challenges/intro-section/intro-section-images/desktop-design.jpg";
 import typingSectionImage from "../challenges/typing-speed-test/typing-test-images/preview.jpg";
+import WeatherSectionImage from "../challenges/weather-app/weather-app-image/preview.webp";
 
 const projects = [
   {
@@ -38,14 +39,14 @@ const projects = [
   },
   {
     id: 3,
-    title: "Weather app",
-    description: "Anlık doğruluk analizi, WPM hesaplama ve oyun modları içeren gelişmiş bir yazma testi uygulaması.",
-    image: typingSectionImage,
-    tags: ["React", "State Logic", "Algorithms"],
+    title: "Weather App",
+    description: "Open-Meteo API kullanarak anlık, saatlik ve 7 günlük hava durumu verilerini sunan, birim dönüştürme özellikli modern arayüz.",
+    image: WeatherSectionImage,
+    tags: ["React", "API", "Async/Await", "Tailwind"],
     internalLink: "/challenges/weather-app",
-    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/typing-speed-test",
+    repoLink: "#",
     difficulty: "Intermediate",
-  },
+},
 ];
 
 function ProjectCard() {
