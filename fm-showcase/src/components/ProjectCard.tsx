@@ -44,7 +44,7 @@ const projects = [
     image: WeatherSectionImage,
     tags: ["React", "API", "Async/Await", "Tailwind"],
     internalLink: "/challenges/weather-app",
-    repoLink: "#",
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/weather-app",
     difficulty: "Intermediate",
 },
 ];
