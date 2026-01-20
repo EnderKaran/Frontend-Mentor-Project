@@ -33,7 +33,7 @@ const projects = [
     image: typingSectionImage,
     tags: ["React", "State Logic", "Algorithms"],
     internalLink: "/challenges/typing-speed-test",
-    repoLink: "#",
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/typing-speed-test",
     difficulty: "Junior",
   },
 ];
