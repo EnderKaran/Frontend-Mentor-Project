@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 
 //images
 import introSectionImage from "../challenges/intro-section/intro-section-images/desktop-design.jpg";
+import typingSectionImage from "../challenges/typing-speed-test/typing-test-images/preview.jpg";
 
 const projects = [
   {
@@ -23,6 +24,16 @@ const projects = [
     tags: ["React", "Tailwind", "Navigation"],
     internalLink: "/challenges/intro-section", 
     repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/intro-section", 
+    difficulty: "Junior",
+  },
+    {
+    id: 2,
+    title: "Typing Speed Test",
+    description: "Anlık doğruluk analizi, WPM hesaplama ve oyun modları içeren gelişmiş bir yazma testi uygulaması.",
+    image: typingSectionImage,
+    tags: ["React", "State Logic", "Algorithms"],
+    internalLink: "/challenges/typing-speed-test",
+    repoLink: "#",
     difficulty: "Junior",
   },
 ];

@@ -4,6 +4,7 @@ import './App.css'
 
 //Page Components
 import IntroSection from "./challenges/intro-section/IntroSection";
+import TypingTest from "./challenges/typing-speed-test/TypingTest";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ProjectCard />} />
         <Route path="/challenges/intro-section" element={<IntroSection />} />
+        <Route path="/challenges/typing-speed-test" element={<TypingTest />} />
       </Routes>
     </div>
   );
