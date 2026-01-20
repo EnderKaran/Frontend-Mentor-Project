@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import ProjectCard from "./components/ProjectCard";
+import './App.css'
 
 //Page Components
 import IntroSection from "./challenges/intro-section/IntroSection";
