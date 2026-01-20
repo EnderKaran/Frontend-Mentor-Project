@@ -10,16 +10,26 @@ export default {
         fontFamily: {
           sora: ['Sora', 'sans-serif'],
           epilogue: ['Epilogue', 'sans-serif'],
+          dmsans: ['DM Sans', 'sans-serif'], 
+          bricolage: ['Bricolage Grotesque', 'sans-serif'],
         },
         colors: {
-          // --- ÖZEL TYPING TEST RENKLERİ (HEX KODLARI) ---
-          'ty-black': '#0E0E0E',       // Arka plan (Simsiyah değil, çok koyu gri)
+          
+          'ty-black': '#0E0E0E',       // Arka plan
           'ty-gray-dark': '#1C1C1C',   // Kart arka planı
           'ty-gray': '#757575',        // Pasif metinler
           'ty-gray-light': '#A3A3A3',  // Okunabilir metinler
           'ty-primary': '#FACC15',     // SARI (Vurgu rengi)
 
-          // --- SHADCN RENKLERİ (Bunları elleme) ---
+          'weather-bg': 'hsl(243, 96%, 9%)',        // Ana Arka Plan (Neutral 900)
+          'weather-card': 'hsl(243, 27%, 20%)',     // Kartlar (Neutral 800)
+          'weather-input': 'hsl(243, 23%, 24%)',    // Input & Hover (Neutral 700)
+          'weather-secondary': 'hsl(243, 23%, 30%)', // Detaylar (Neutral 600)
+          'weather-text-gray': 'hsl(240, 6%, 70%)', // Gri Yazılar (Neutral 300)
+          'weather-button': 'hsl(233, 67%, 56%)',   // Mavi Buton (Blue 500)
+          'weather-accent': 'hsl(28, 100%, 52%)',   // Turuncu Aksan (Orange 500)
+
+          // --- SHADCN RENKLERİ ---
           background: "hsl(var(--background))",
           foreground: "hsl(var(--foreground))",
           card: {
