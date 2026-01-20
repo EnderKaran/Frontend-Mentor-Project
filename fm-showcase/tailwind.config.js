@@ -1,23 +1,60 @@
-
+/** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: ["class"],
     content: [
       "./index.html",
       "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-  extend: {
-    fontFamily: {
-      sora: ['Sora', 'sans-serif'], 
-      epilogue: ['Epilogue', 'sans-serif'], 
+      extend: {
+        fontFamily: {
+          sora: ['Sora', 'sans-serif'],
+          epilogue: ['Epilogue', 'sans-serif'],
+        },
+        colors: {
+          // --- ÖZEL TYPING TEST RENKLERİ (HEX KODLARI) ---
+          'ty-black': '#0E0E0E',       // Arka plan (Simsiyah değil, çok koyu gri)
+          'ty-gray-dark': '#1C1C1C',   // Kart arka planı
+          'ty-gray': '#757575',        // Pasif metinler
+          'ty-gray-light': '#A3A3A3',  // Okunabilir metinler
+          'ty-primary': '#FACC15',     // SARI (Vurgu rengi)
+
+          // --- SHADCN RENKLERİ (Bunları elleme) ---
+          background: "hsl(var(--background))",
+          foreground: "hsl(var(--foreground))",
+          card: {
+            DEFAULT: "hsl(var(--card))",
+            foreground: "hsl(var(--card-foreground))",
+          },
+          popover: {
+            DEFAULT: "hsl(var(--popover))",
+            foreground: "hsl(var(--popover-foreground))",
+          },
+          primary: {
+            DEFAULT: "hsl(var(--primary))",
+            foreground: "hsl(var(--primary-foreground))",
+          },
+          secondary: {
+            DEFAULT: "hsl(var(--secondary))",
+            foreground: "hsl(var(--secondary-foreground))",
+          },
+          muted: {
+            DEFAULT: "hsl(var(--muted))",
+            foreground: "hsl(var(--muted-foreground))",
+          },
+          accent: {
+            DEFAULT: "hsl(var(--accent))",
+            foreground: "hsl(var(--accent-foreground))",
+          },
+          destructive: {
+            DEFAULT: "hsl(var(--destructive))",
+            foreground: "hsl(var(--destructive-foreground))",
+          },
+          border: "hsl(var(--border))",
+          input: "hsl(var(--input))",
+          ring: "hsl(var(--ring))",
+        }
+      },
     },
-    colors: {
-      'ty-black': 'hsl(0, 0%, 7%)',       
-      'ty-gray-dark': 'hsl(0, 0%, 15%)',  
-      'ty-gray': 'hsl(240, 3%, 46%)',     
-      'ty-gray-light': 'hsl(240, 1%, 59%)', 
-      'ty-primary': 'hsl(49, 85%, 70%)', 
-    }
-  }
-},
-    plugins: [],
-  }
+    plugins: [require("tailwindcss-animate")],
+}
