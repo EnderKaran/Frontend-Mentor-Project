@@ -115,8 +115,8 @@ export default function TypingTest() {
     return(
         <div className="min-h-screen bg-[#0E0E0E] text-gray-400 font-sora p-6 flex flex-col items-center relative overflow-y-auto">
       
-            {/* Üst Bar */}
-            <div className="w-full max-w-5xl mb-8 flex justify-between items-center z-10">
+            {/* ÇÖZÜM 2: Landmark Hatası İçin 'div' yerine 'nav' kullandık */}
+            <nav className="w-full max-w-5xl mb-8 flex justify-between items-center z-10" aria-label="Main Navigation">
                 <Button asChild variant="ghost" className="text-gray-400 hover:text-white hover:bg-white/10">
                     <Link to="/" className="flex items-center gap-2">
                         <ArrowLeft className="w-5 h-5" /> Back
@@ -130,7 +130,7 @@ export default function TypingTest() {
                         Time: <span className={timeLeft < 10 ? "text-red-500" : ""}>{timeLeft}s</span>
                     </div>
                 </div>
-            </div>
+            </nav>
 
             {/* HEADER */}
             <header className="mb-12 text-center z-10 relative">
@@ -143,23 +143,19 @@ export default function TypingTest() {
             {/* OYUN ALANI */}
             <main className="w-full max-w-5xl bg-[#1C1C1C] rounded-2xl p-8 md:p-12 border border-white/5 relative overflow-hidden flex flex-col gap-6 min-h-[400px] z-10 shadow-2xl">
                 
-                {/* --- ZORLUK SEÇİMİ */}
                 <div className="flex justify-center gap-4 mb-4">
                 {(['easy', 'medium', 'hard'] as Difficulty[]).map((level) => (
                     <button 
                         key={level}
                         onClick={() => {
                             setDifficulty(level);
-                            
-                            // Zorluk değişince her şeyi sıfırla (Reset)
                             const options = textData[level];
                             setTargetText(options[Math.floor(Math.random() * options.length)].text);
                             setUserInput("");
-                            setGameState('idle'); // Oyunu durdur ve başa al
+                            setGameState('idle'); 
                             setTimeLeft(60);
                             setWpm(0);
                             setAccuracy(0);
-                            
                             
                             if(inputRef.current) inputRef.current.blur();
                         }}
@@ -208,6 +204,7 @@ export default function TypingTest() {
                         </div>
                     )}
 
+                    {/* ÇÖZÜM 1: Label Hatası İçin 'aria-label' ekledik */}
                     <input 
                         ref={inputRef}
                         type="text"
@@ -216,14 +213,13 @@ export default function TypingTest() {
                         className="absolute inset-0 opacity-0 cursor-default"
                         autoComplete="off"
                         autoFocus
+                        aria-label="Typing Input"
                     />
                 </div>
 
                 <div className="flex justify-center mt-auto relative z-30 pt-6">
-                   
                     <Button 
                         onClick={() => {
-                            // Eğer oyun bitmişse veya çalışıyorsa yeniden başlat
                             startGame();
                         }}
                         className="bg-yellow-400 text-black hover:bg-yellow-300 font-bold px-12 py-8 text-2xl rounded-2xl shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(250,204,21,0.5)] cursor-pointer border-none"
@@ -233,7 +229,7 @@ export default function TypingTest() {
                 </div>
             </main>
 
-            {/* --- SONUÇ MODALI --- */}
+            {/* SONUÇ MODALI */}
             {gameState === 'finished' && (
                 <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
                     <div className="bg-[#1C1C1C] border border-white/10 rounded-2xl p-10 max-w-lg w-full text-center shadow-2xl relative">
