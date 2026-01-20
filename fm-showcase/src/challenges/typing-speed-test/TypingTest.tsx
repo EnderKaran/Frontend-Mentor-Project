@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+//importlar
+import smallLogo from "../typing-speed-test/typing-test-images/logo-small.svg"
+
 export default function TypingTest(){
     return(
         <div className="min-h-screen bg-ty-black text-ty-gray-light font-sora p-6 flex flex-col items-center">
@@ -19,7 +22,7 @@ export default function TypingTest(){
             {/* Header / Logo Alanı */}
             <header className="w-full max-w-5xl flex justify-between items-center mb-12">
                 <div className="flex items-center gap-3">
-                    <img src="/images/typing-test/logo-small.svg" alt="Logo" className="w-8 h-8" />
+                    <img src= {smallLogo} alt="Logo" className="w-8 h-8" />
                     <h1 className="text-2xl font-bold text-white leading-none pt-1">Typing Speed Test</h1>
                 </div>
             </header>
