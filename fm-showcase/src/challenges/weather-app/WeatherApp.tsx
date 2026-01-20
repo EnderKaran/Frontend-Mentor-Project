@@ -1,10 +1,33 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { searchCity, getWeather } from "./api";
 
 // Logo importunu şimdilik yapmıyorum, public klasöründen çekeceğiz.
 
 export default function WeatherApp() {
+
+    useEffect(() => {
+        const testAPI = async () => {
+            console.log("🚀 Test Başlıyor...");
+
+            // 1. Şehir Ara: "Berlin"
+            const cities = await searchCity("Berlin");
+            console.log("🏙️ Bulunan Şehirler:", cities);
+
+            if (cities && cities.length > 0) {
+                const berlin = cities[0];
+                console.log(`✅ Seçilen Şehir: ${berlin.name} (${berlin.latitude}, ${berlin.longitude})`);
+
+                // 2. Hava Durumunu Çek
+                const weather = await getWeather(berlin.latitude, berlin.longitude, 'celsius');
+                console.log("🌤️ Hava Durumu Verisi:", weather);
+            }
+        }
+        testAPI();
+    } , []);
+
   return (
     // Ana Kapsayıcı: Lacivert arka plan, DM Sans fontu
     <div className="min-h-screen bg-weather-bg text-white font-dmsans p-4 md:p-8 flex flex-col items-center">
