@@ -1,4 +1,3 @@
-// Avatar resimlerini import et
 import imgAmyrobsonPng from './interactive-comments-images/avatar/image-amyrobson.png';
 import imgMaxblagunPng from './interactive-comments-images/avatar/image-maxblagun.png';
 import imgRamsesmironPng from './interactive-comments-images/avatar/image-ramsesmiron.png';
