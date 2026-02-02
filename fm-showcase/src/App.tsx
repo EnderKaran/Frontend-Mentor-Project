@@ -6,6 +6,7 @@ import './App.css'
 import IntroSection from "./challenges/intro-section/IntroSection";
 import TypingTest from "./challenges/typing-speed-test/TypingTest";
 import WeatherApp from "./challenges/weather-app/WeatherApp";
+import ExtensionManager from "./challenges/extension-manager/ExtensionManager";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/challenges/intro-section" element={<IntroSection />} />
         <Route path="/challenges/typing-speed-test" element={<TypingTest />} />
         <Route path="/challenges/weather-app" element={<WeatherApp />} />
+        <Route path="/challenges/extension-manager" element={<ExtensionManager />} />
       </Routes>
     </div>
   );

@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import introSectionImage from "../challenges/intro-section/intro-section-images/desktop-design.jpg";
 import typingSectionImage from "../challenges/typing-speed-test/typing-test-images/preview.jpg";
 import WeatherSectionImage from "../challenges/weather-app/weather-app-image/preview.webp";
+import ExtensionSectionImage from "../challenges/extension-manager/extension-manager-images/preview.webp";
 
 const projects = [
   {
@@ -47,6 +48,16 @@ const projects = [
     repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/weather-app",
     difficulty: "Intermediate",
 },
+{
+  id: 4,
+  title: "Extension Manager UI",
+  description: "Eklentileri yönetmek, filtrelemek ve silmek için tasarlanmış modern, çoklu tema destekli yönetim paneli.",
+  image: ExtensionSectionImage,
+  tags: ["React", "Filtering", "Dark Mode", "CRUD"],
+  internalLink: "/challenges/extension-manager",
+  repoLink: "#",
+  difficulty: "Junior",
+}
 ];
 
 function ProjectCard() {
