@@ -55,7 +55,7 @@ const projects = [
   image: ExtensionSectionImage,
   tags: ["React", "Filtering", "Dark Mode", "CRUD"],
   internalLink: "/challenges/extension-manager",
-  repoLink: "#",
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/extension-manager",
   difficulty: "Junior",
 }
 ];
