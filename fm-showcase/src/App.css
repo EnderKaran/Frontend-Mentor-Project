@@ -171,3 +171,19 @@ body {
   font-family: 'Rubik', sans-serif;
   background-color: hsl(223, 19%, 93%); /* Grey 100 */
 }
+
+.force-light {
+  color-scheme: light !important;
+  --background: 0 0% 100% !important;
+  --foreground: 222.2 84% 4.9% !important;
+  background-color: #f5f6fa !important;
+  color: #334253 !important;
+}
+
+.force-light .bg-white {
+  background-color: #ffffff !important;
+}
+
+.force-light text-mod-dark-blue {
+  color: #334253 !important;
+}

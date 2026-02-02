@@ -16,6 +16,7 @@ import introSectionImage from "../challenges/intro-section/intro-section-images/
 import typingSectionImage from "../challenges/typing-speed-test/typing-test-images/preview.jpg";
 import WeatherSectionImage from "../challenges/weather-app/weather-app-image/preview.webp";
 import ExtensionSectionImage from "../challenges/extension-manager/extension-manager-images/preview.webp";
+import CommentsSectionImage from "../challenges/interactive-comments/interactive-comments-images/preview.webp";
 
 const projects = [
   {
@@ -57,6 +58,16 @@ const projects = [
   internalLink: "/challenges/extension-manager",
   repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/extension-manager",
   difficulty: "Junior",
+},
+{
+  id: 5,
+  title: "Interactive Comments Section",
+  description: "İç içe geçmiş yorum yapısı, oylama sistemi ve tam CRUD (Ekleme, Düzenleme, Silme) özelliklerine sahip gelişmiş etkileşimli panel.",
+  image: CommentsSectionImage,
+  tags: ["React", "Nested State", "CRUD", "LocalStorage"],
+  internalLink: "/challenges/interactive-comments",
+  repoLink: "#",
+  difficulty: "Intermediate",
 }
 ];
 
