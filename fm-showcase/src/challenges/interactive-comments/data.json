@@ -1,9 +1,5 @@
 {
   "currentUser": {
-    "image": { 
-      "png": "./interactive-comments-images/avatar/image-juliusomo.png",
-      "webp": "/interactive-comments-images/avatar/image-juliusomo.webp"
-    },
     "username": "juliusomo"
   },
   "comments": [
@@ -13,10 +9,6 @@
       "createdAt": "1 month ago",
       "score": 12,
       "user": {
-        "image": { 
-          "png": "/interactive-comments-images/avatar/image-amyrobson.png",
-          "webp": "/interactive-comments-images/avatar/image-amyrobson.webp"
-        },
         "username": "amyrobson"
       },
       "replies": []
@@ -27,10 +19,6 @@
       "createdAt": "2 weeks ago",
       "score": 5,
       "user": {
-        "image": { 
-          "png": "/interactive-comments-images/avatar/image-maxblagun.png",
-          "webp": "/interactive-comments-images/avatar/image-maxblagun.webp"
-        },
         "username": "maxblagun"
       },
       "replies": [
@@ -41,10 +29,6 @@
           "score": 4,
           "replyingTo": "maxblagun",
           "user": {
-            "image": { 
-              "png": "/interactive-comments-images/avatar/image-ramsesmiron.png",
-              "webp": "/interactive-comments-images/avatar/image-ramsesmiron.webp"
-            },
             "username": "ramsesmiron"
           }
         },
@@ -55,10 +39,6 @@
           "score": 2,
           "replyingTo": "ramsesmiron",
           "user": {
-            "image": { 
-              "png": "/interactive-comments-images/avatar/image-juliusomo.png",
-              "webp": "/interactive-comments-images/avatar/image-juliusomo.webp"
-            },
             "username": "juliusomo"
           }
         }
