@@ -17,7 +17,7 @@ export default function CommentCard({ item, currentUser }: CommentCardProps) {
 
   // Resim yolunu garantiye al: Eğer yol ./ ile başlıyorsa public klasörü için düzelt
   const fixImagePath = (path: string) => {
-    if (path.startsWith('./')) return path.substring(1); // './images/...' -> '/images/...'
+    if (path.startsWith('./')) return path.substring(1);
     return path;
   };
 
