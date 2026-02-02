@@ -66,43 +66,43 @@ const projects = [
   image: CommentsSectionImage,
   tags: ["React", "Nested State", "CRUD", "LocalStorage"],
   internalLink: "/challenges/interactive-comments",
-  repoLink: "#",
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/interactive-comments",
   difficulty: "Intermediate",
 }
 ];
 
 function ProjectCard() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen font-sans bg-neutral-950 text-neutral-100 selection:bg-indigo-500 selection:text-white">
       {/* HEADER SECTION */}
-      <header className="container mx-auto py-16 px-4 text-center space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-medium border border-indigo-500/20 mb-4">
+      <header className="container px-4 py-16 mx-auto space-y-4 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-sm font-medium text-indigo-400 border rounded-full bg-indigo-500/10 border-indigo-500/20">
           <Code2 className="w-4 h-4" />
           <span>Frontend Mentor Challenges</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold tracking-tight text-transparent md:text-6xl bg-linear-to-r from-white to-neutral-400 bg-clip-text">
           My Coding Journey
         </h1>
-        <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
+        <p className="max-w-2xl mx-auto text-lg text-neutral-400">
           A collection of designs I've solved on Frontend Mentor. 
         </p>
       </header>
 
       {/* GRID SECTION */}
-      <main className="container mx-auto px-4 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <main className="container px-4 pb-20 mx-auto">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Card 
               key={project.id} 
-              className="bg-neutral-900 border-neutral-800 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 flex flex-col overflow-hidden group"
+              className="flex flex-col overflow-hidden transition-all duration-300 bg-neutral-900 border-neutral-800 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 group"
             >
               {/* Image Area */}
-              <div className="relative h-48 w-full bg-neutral-800 overflow-hidden">
+              <div className="relative w-full h-48 overflow-hidden bg-neutral-800">
                 {project.image ? (
                    <img 
                      src={project.image} 
                      alt={project.title} 
-                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                    />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-neutral-700">
@@ -111,7 +111,7 @@ function ProjectCard() {
                 )}
                 
                 <div className="absolute top-3 right-3">
-                   <Badge variant="secondary" className="bg-black/60 backdrop-blur-md text-white border-none hover:bg-black/80">
+                   <Badge variant="secondary" className="text-white border-none bg-black/60 backdrop-blur-md hover:bg-black/80">
                       {project.difficulty}
                    </Badge>
                 </div>
@@ -121,31 +121,31 @@ function ProjectCard() {
                 <CardTitle className="text-xl text-neutral-100">{project.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-neutral-400 border-neutral-700 text-xs">
+                    <Badge key={tag} variant="outline" className="text-xs text-neutral-400 border-neutral-700">
                       {tag}
                     </Badge>
                   ))}
                 </div>
               </CardHeader>
 
-              <CardContent className="flex-grow">
-                <CardDescription className="text-neutral-400 leading-relaxed">
+              <CardContent className="grow">
+                <CardDescription className="leading-relaxed text-neutral-400">
                   {project.description}
                 </CardDescription>
               </CardContent>
 
               <CardFooter className="grid grid-cols-2 gap-3 pt-0">
                 {/* REPO BUTTON */}
-                <Button asChild variant="outline" className="w-full border-neutral-700 hover:bg-neutral-800 hover:text-white text-neutral-300 cursor-pointer">
+                <Button asChild variant="outline" className="w-full cursor-pointer border-neutral-700 hover:bg-neutral-800 hover:text-white text-neutral-300">
                   <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> Code
+                    <Github className="w-4 h-4 mr-2" /> Code
                   </a>
                 </Button>
 
                 {/* PROJECT BUTTON */}
-                <Button asChild className="w-full bg-indigo-600 hover:bg-indigo-700 text-white border-0 cursor-pointer">
+                <Button asChild className="w-full text-white bg-indigo-600 border-0 cursor-pointer hover:bg-indigo-700">
                   <Link to={project.internalLink}>
-                    <Eye className="mr-2 h-4 w-4" /> Go to Page
+                    <Eye className="w-4 h-4 mr-2" /> Go to Page
                   </Link>
                 </Button>
               </CardFooter>
@@ -155,7 +155,7 @@ function ProjectCard() {
       </main>
       
       {/* FOOTER */}
-      <footer className="border-t border-neutral-800 py-8 text-center text-neutral-500 text-sm">
+      <footer className="py-8 text-sm text-center border-t border-neutral-800 text-neutral-500">
         <p>© {new Date().getFullYear()} Frontend Mentor Portfolio. Built with React & Shadcn UI.</p>
       </footer>
     </div>
