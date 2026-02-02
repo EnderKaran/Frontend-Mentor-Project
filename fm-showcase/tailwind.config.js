@@ -40,6 +40,16 @@ export default {
           // Vurgu Rengi
           'ext-red': 'hsl(3, 71%, 56%)',
 
+          'mod-purple': 'hsl(238, 40%, 52%)',
+          'mod-red': 'hsl(358, 79%, 66%)',
+          'mod-light-purple': 'hsl(239, 57%, 85%)',
+          'mod-pale-red': 'hsl(357, 100%, 86%)',
+          'mod-dark-blue': 'hsl(212, 24%, 26%)',
+          'mod-grayish-blue': 'hsl(211, 10%, 45%)',
+          'mod-light-gray': 'hsl(223, 19%, 93%)',
+          'mod-very-light-gray': 'hsl(228, 33%, 97%)',
+          'mod-white': 'hsl(0, 100%, 100%)',
+
           // --- SHADCN RENKLERİ ---
           background: "hsl(var(--background))",
           foreground: "hsl(var(--foreground))",
