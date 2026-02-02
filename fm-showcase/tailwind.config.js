@@ -12,6 +12,7 @@ export default {
           epilogue: ['Epilogue', 'sans-serif'],
           dmsans: ['DM Sans', 'sans-serif'], 
           bricolage: ['Bricolage Grotesque', 'sans-serif'],
+          noto: ['Noto Sans', 'sans-serif'],
         },
         colors: {
           
@@ -28,6 +29,16 @@ export default {
           'weather-text-gray': 'hsl(240, 6%, 70%)', // Gri Yazılar (Neutral 300)
           'weather-button': 'hsl(233, 67%, 56%)',   // Mavi Buton (Blue 500)
           'weather-accent': 'hsl(28, 100%, 52%)',   // Turuncu Aksan (Orange 500)
+
+          // Neutral Renkler
+          'ext-900': 'hsl(227, 75%, 14%)',
+          'ext-800': 'hsl(226, 25%, 17%)',
+          'ext-700': 'hsl(225, 23%, 24%)',
+          'ext-600': 'hsl(226, 11%, 37%)',
+          'ext-200': 'hsl(217, 61%, 90%)',
+          'ext-0': 'hsl(200, 60%, 99%)',
+          // Vurgu Rengi
+          'ext-red': 'hsl(3, 71%, 56%)',
 
           // --- SHADCN RENKLERİ ---
           background: "hsl(var(--background))",
@@ -63,6 +74,10 @@ export default {
           border: "hsl(var(--border))",
           input: "hsl(var(--input))",
           ring: "hsl(var(--ring))",
+        },
+        backgroundImage: {
+          'ext-light-grad': 'linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)',
+          'ext-dark-grad': 'linear-gradient(180deg, #040918 0%, #091540 100%)',
         }
       },
     },
