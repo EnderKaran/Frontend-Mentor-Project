@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 /* Tailwind Direktifleri */
 @import "tailwindcss";
@@ -153,7 +154,56 @@
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
   }
-}
+
+  [data-theme='1'] {
+    /* --- CALCULATOR THEME 1 (Default) --- */
+    --calc-bg-main: hsl(222, 26%, 31%);
+    --calc-bg-keypad: hsl(223, 31%, 20%);
+    --calc-bg-screen: hsl(224, 36%, 15%);
+    --calc-key-bg-primary: hsl(30, 25%, 89%);
+    --calc-key-shadow-primary: hsl(28, 16%, 65%);
+    --calc-key-bg-secondary: hsl(225, 21%, 49%);
+    --calc-key-shadow-secondary: hsl(224, 28%, 35%);
+    --calc-key-bg-accent: hsl(6, 63%, 50%);
+    --calc-key-shadow-accent: hsl(6, 70%, 34%);
+    --calc-text-main: hsl(0, 100%, 100%);
+    --calc-text-keys: hsl(221, 14%, 31%);
+    --calc-text-accent: hsl(0, 100%, 100%);
+  }
+
+  [data-theme='2'] {
+    /* --- CALCULATOR THEME 2 --- */
+    --calc-bg-main: hsl(0, 0%, 90%);
+    --calc-bg-keypad: hsl(0, 5%, 81%);
+    --calc-bg-screen: hsl(0, 0%, 93%);
+    --calc-key-bg-primary: hsl(45, 7%, 89%);
+    --calc-key-shadow-primary: hsl(35, 11%, 61%);
+    --calc-key-bg-secondary: hsl(185, 42%, 37%);
+    --calc-key-shadow-secondary: hsl(185, 58%, 25%);
+    --calc-key-bg-accent: hsl(25, 98%, 40%);
+    --calc-key-shadow-accent: hsl(25, 99%, 27%);
+    --calc-text-main: hsl(60, 10%, 19%);
+    --calc-text-keys: hsl(60, 10%, 19%);
+    --calc-text-accent: hsl(0, 100%, 100%);
+  }
+
+  [data-theme='3'] {
+    /* --- CALCULATOR THEME 3 --- */
+    --calc-bg-main: hsl(268, 75%, 9%);
+    --calc-bg-keypad: hsl(268, 71%, 12%);
+    --calc-bg-screen: hsl(268, 71%, 12%);
+    --calc-key-bg-primary: hsl(268, 47%, 21%);
+    --calc-key-shadow-primary: hsl(290, 70%, 36%);
+    --calc-key-bg-secondary: hsl(281, 89%, 26%);
+    --calc-key-shadow-secondary: hsl(285, 91%, 52%);
+    --calc-key-bg-accent: hsl(176, 100%, 44%);
+    --calc-key-shadow-accent: hsl(177, 92%, 70%);
+    --calc-text-main: hsl(52, 100%, 62%);
+    --calc-text-keys: hsl(52, 100%, 62%);
+    --calc-text-accent: hsl(198, 20%, 13%);
+  }
+
+
 
 
 @layer base {
