@@ -8,6 +8,7 @@ import TypingTest from "./challenges/typing-speed-test/TypingTest";
 import WeatherApp from "./challenges/weather-app/WeatherApp";
 import ExtensionManager from "./challenges/extension-manager/ExtensionManager";
 import InteractiveComments from "./challenges/interactive-comments/InteractiveComments";
+import LaunchCountdown from "./challenges/Launch-countdown-timer/LaunchCountdown";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/challenges/weather-app" element={<WeatherApp />} />
         <Route path="/challenges/extension-manager" element={<ExtensionManager />} />
         <Route path="/challenges/interactive-comments" element={<InteractiveComments />} />
+        <Route path="/challenges/launch-countdown" element={<LaunchCountdown />} />
       </Routes>
     </div>
   );

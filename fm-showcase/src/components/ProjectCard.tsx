@@ -17,6 +17,7 @@ import typingSectionImage from "../challenges/typing-speed-test/typing-test-imag
 import WeatherSectionImage from "../challenges/weather-app/weather-app-image/preview.webp";
 import ExtensionSectionImage from "../challenges/extension-manager/extension-manager-images/preview.webp";
 import CommentsSectionImage from "../challenges/interactive-comments/interactive-comments-images/preview.webp";
+import launchCountdownImage from "../challenges/launch-countdown-timer/launch-countdown-timer-images/preview.webp";
 
 const projects = [
   {
@@ -66,6 +67,16 @@ const projects = [
   image: CommentsSectionImage,
   tags: ["React", "Nested State", "CRUD", "LocalStorage"],
   internalLink: "/challenges/interactive-comments",
+  repoLink: "#",
+  difficulty: "Intermediate",
+},
+{
+  id: 6,
+  title: "Launch Countdown Timer",
+  description: "Gelişmiş zaman yönetimi mantığı ve özel CSS Keyframes ile kurgulanmış 3D flip card animasyonları içeren 14 günlük geri sayım uygulaması.",
+  image: launchCountdownImage,
+  tags: ["React", "CSS Keyframes", "3D Animation", "Time Logic"],
+  internalLink: "/challenges/launch-countdown",
   repoLink: "#",
   difficulty: "Intermediate",
 }
