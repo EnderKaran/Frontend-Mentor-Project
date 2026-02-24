@@ -18,6 +18,7 @@ import WeatherSectionImage from "../challenges/weather-app/weather-app-image/pre
 import ExtensionSectionImage from "../challenges/extension-manager/extension-manager-images/preview.webp";
 import CommentsSectionImage from "../challenges/interactive-comments/interactive-comments-images/preview.webp";
 import launchCountdownImage from "../challenges/launch-countdown-timer/launch-countdown-timer-images/preview.webp";
+import calculatorAppImage from "../challenges/calculator-app/preview.webp"
 
 const projects = [
   {
@@ -77,7 +78,17 @@ const projects = [
   image: launchCountdownImage,
   tags: ["React", "CSS Keyframes", "3D Animation", "Time Logic"],
   internalLink: "/challenges/launch-countdown",
-  repoLink: "#",
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/Launch-countdown-timer",
+  difficulty: "Intermediate",
+},
+{
+  id: 7,
+  title: "Calculator App",
+  description: "Üç farklı tema desteği (Multi-theme), TypeScript ile kurgulanmış gelişmiş state yönetimi (useReducer) ve erişilebilir radyo buton mimarisi içeren hesap makinesi.",
+  image: calculatorAppImage,
+  tags: ["React", "TypeScript", "useReducer", "CSS Variables", "A11y"],
+  internalLink: "/challenges/calculator",
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/calculator-app",
   difficulty: "Intermediate",
 }
 ];
