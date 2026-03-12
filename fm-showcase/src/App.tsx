@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import ProjectCard from "./components/ProjectCard";
 import './App.css'
 
-//Page Components
+// Page Components
 import IntroSection from "./challenges/intro-section/IntroSection";
 import TypingTest from "./challenges/typing-speed-test/TypingTest";
 import WeatherApp from "./challenges/weather-app/WeatherApp";
@@ -10,6 +10,10 @@ import ExtensionManager from "./challenges/extension-manager/ExtensionManager";
 import InteractiveComments from "./challenges/interactive-comments/InteractiveComments";
 import LaunchCountdown from "./challenges/Launch-countdown-timer/LaunchCountdown";
 import CalculatorApp from "./challenges/calculator-app/CalculatorApp";
+
+// Multi-step Form Components
+import MultiStepForm from "./challenges/multi-step-form/MultiStepForm";
+import { FormProvider } from "./context/FormContext";
 
 function App() {
   return (
@@ -23,6 +27,15 @@ function App() {
         <Route path="/challenges/interactive-comments" element={<InteractiveComments />} />
         <Route path="/challenges/launch-countdown" element={<LaunchCountdown />} />
         <Route path="/challenges/calculator" element={<CalculatorApp />} />
+        
+        <Route 
+          path="/challenges/multi-step-form" 
+          element={
+            <FormProvider>
+              <MultiStepForm />
+            </FormProvider>
+          } 
+        />
       </Routes>
     </div>
   );

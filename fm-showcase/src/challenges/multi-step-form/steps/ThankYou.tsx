@@ -1,9 +1,11 @@
+import thankyouImage from "../assets/icon-thank-you.svg"
+
 export default function ThankYou() {
   return (
     <div className="flex flex-col items-center justify-center h-full text-center py-10 md:py-0 animate-fadeIn">
       {/* Onay İkonu */}
       <img 
-        src="/assets/images/icon-thank-you.svg" 
+        src={thankyouImage}
         alt="Thank You" 
         className="w-14 h-14 md:w-20 md:h-20 mb-8"
       />

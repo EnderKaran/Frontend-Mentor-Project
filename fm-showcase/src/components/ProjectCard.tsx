@@ -19,6 +19,7 @@ import ExtensionSectionImage from "../challenges/extension-manager/extension-man
 import CommentsSectionImage from "../challenges/interactive-comments/interactive-comments-images/preview.webp";
 import launchCountdownImage from "../challenges/launch-countdown-timer/launch-countdown-timer-images/preview.webp";
 import calculatorAppImage from "../challenges/calculator-app/preview.webp"
+import multistepformAppImage from "../challenges/multi-step-form/preview.webp"
 
 const projects = [
   {
@@ -90,6 +91,16 @@ const projects = [
   internalLink: "/challenges/calculator",
   repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/calculator-app",
   difficulty: "Intermediate",
+},
+{
+  id: 8,
+  title: "Multi-step Form",
+  description: "Dinamik validasyon mantığı, adımlar arası veri koruma (Context API) ve aylık/yıllık abonelik geçişlerine göre güncellenen interaktif özet ekranı içeren gelişmiş form mimarisi.",
+  image: multistepformAppImage,
+  tags: ["React", "TypeScript", "Context API", "Tailwind CSS", "Form Validation"],
+  internalLink: "/challenges/multi-step-form",
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/multi-step-form",
+  difficulty: "Advanced",
 }
 ];
 
