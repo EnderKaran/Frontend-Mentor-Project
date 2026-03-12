@@ -1,13 +1,14 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
+import type { ReactNode } from "react";
 
 export const FormContext = createContext<any>(null);
 
-export const FormProvider = ({ children }: { children: React.ReactNode }) => {
+export const FormProvider = ({ children }: { children: ReactNode }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     personalInfo: { name: "", email: "", phone: "" },
-    plan: { type: "Arcade", isYearly: false, price: 9 },
-    addOns: []
+    plan: { id: "arcade", name: "Arcade", price: 9, isYearly: false },
+    addOns: [] as { id: string; title: string; price: number }[]
   });
 
   return (
