@@ -18,8 +18,9 @@ import WeatherSectionImage from "../challenges/weather-app/weather-app-image/pre
 import ExtensionSectionImage from "../challenges/extension-manager/extension-manager-images/preview.webp";
 import CommentsSectionImage from "../challenges/interactive-comments/interactive-comments-images/preview.webp";
 import launchCountdownImage from "../challenges/launch-countdown-timer/launch-countdown-timer-images/preview.webp";
-import calculatorAppImage from "../challenges/calculator-app/preview.webp"
-import multistepformAppImage from "../challenges/multi-step-form/preview.webp"
+import calculatorAppImage from "../challenges/calculator-app/preview.webp";
+import multistepformAppImage from "../challenges/multi-step-form/preview.webp";
+import RoomHomePageAppImage from "../challenges/room-homepage/preview.webp";
 
 const projects = [
   {
@@ -101,6 +102,16 @@ const projects = [
   internalLink: "/challenges/multi-step-form",
   repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/multi-step-form",
   difficulty: "Advanced",
+},
+{
+  id: 9,
+  title: "Room Homepage",
+  description: "Dinamik slider mekanizması, klavye ile navigasyon desteği ve karmaşık Grid yapıları içeren, responsive tasarımıyla öne çıkan modern bir e-ticaret açılış sayfası.",
+  image: RoomHomePageAppImage,
+  tags: ["React", "Tailwind CSS", "Keyboard Navigation", "CSS Grid", "Responsive Design"],
+  internalLink: "/challenges/room-homepage",
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/room-homepage",
+  difficulty: "Intermediate",
 }
 ];
 

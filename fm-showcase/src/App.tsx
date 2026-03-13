@@ -11,6 +11,8 @@ import InteractiveComments from "./challenges/interactive-comments/InteractiveCo
 import LaunchCountdown from "./challenges/Launch-countdown-timer/LaunchCountdown";
 import CalculatorApp from "./challenges/calculator-app/CalculatorApp";
 
+import RoomHomepage from "./challenges/room-homepage/RoomHomepage";
+
 // Multi-step Form Components
 import MultiStepForm from "./challenges/multi-step-form/MultiStepForm";
 import { FormProvider } from "./context/FormContext";
@@ -28,6 +30,9 @@ function App() {
         <Route path="/challenges/launch-countdown" element={<LaunchCountdown />} />
         <Route path="/challenges/calculator" element={<CalculatorApp />} />
         
+        {/* Room Homepage Rotası */}
+        <Route path="/challenges/room-homepage" element={<RoomHomepage />} />
+
         <Route 
           path="/challenges/multi-step-form" 
           element={

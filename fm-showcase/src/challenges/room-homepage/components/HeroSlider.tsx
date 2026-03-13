@@ -5,7 +5,7 @@ import hero1Desktop from "../images/desktop-image-hero-1.jpg";
 import hero1Mobile from "../images/mobile-image-hero-1.jpg";
 import hero2Desktop from "../images/desktop-image-hero-2.jpg";
 import hero2Mobile from "../images/mobile-image-hero-2.jpg";
-import hero3Desktop from "../images/daesktop-image-hero-3.jpg";
+import hero3Desktop from "../images/desktop-image-hero-3.jpg";
 import hero3Mobile from "../images/mobile-image-hero-3.jpg";
 import iconAngleLeft from "../images/icon-angle-left.svg";
 import iconAngleRight from "../images/icon-angle-right.svg";
