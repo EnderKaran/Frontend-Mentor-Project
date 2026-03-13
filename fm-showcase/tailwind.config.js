@@ -13,8 +13,13 @@ export default {
           dmsans: ['DM Sans', 'sans-serif'], 
           bricolage: ['Bricolage Grotesque', 'sans-serif'],
           noto: ['Noto Sans', 'sans-serif'],
+          spartan: ['League Spartan', 'sans-serif'],
         },
         colors: {
+
+          'room-grey-500': 'hsl(0, 0%, 63%)',
+          'room-grey-800': 'hsl(0, 0%, 27%)',
+          'room-black': 'hsl(0, 0%, 0%)',
           
           'ty-black': '#0E0E0E',       // Arka plan
           'ty-gray-dark': '#1C1C1C',   // Kart arka planı
@@ -88,7 +93,12 @@ export default {
         backgroundImage: {
           'ext-light-grad': 'linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)',
           'ext-dark-grad': 'linear-gradient(180deg, #040918 0%, #091540 100%)',
-        }
+        },
+        fontWeight: {
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+      }
       },
     },
     plugins: [require("tailwindcss-animate")],
