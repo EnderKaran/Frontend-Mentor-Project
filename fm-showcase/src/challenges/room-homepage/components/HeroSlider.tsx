@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 // Görsel Importları
 import hero1Desktop from "../images/desktop-image-hero-1.jpg";
 import hero1Mobile from "../images/mobile-image-hero-1.jpg";
-import hero2Desktop from "./assets/images/desktop-image-hero-2.jpg";
+import hero2Desktop from "../images/desktop-image-hero-2.jpg";
 import hero2Mobile from "../images/mobile-image-hero-2.jpg";
 import hero3Desktop from "../images/daesktop-image-hero-3.jpg";
 import hero3Mobile from "../images/mobile-image-hero-3.jpg";
@@ -63,7 +63,7 @@ export default function HeroSlider() {
     <section className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] min-h-[60vh] lg:min-h-[534px] font-spartan">
       {/* SOL: Resim Alanı */}
       <div className="relative overflow-hidden">
-        <picture key={currentIndex}> {/* Key ekleyerek geçişlerde animasyonu tetikleyebiliriz */}
+        <picture key={currentIndex}>
           <source media="(min-width: 1024px)" srcSet={currentSlide.desktopImg} />
           <img 
             src={currentSlide.mobileImg} 
