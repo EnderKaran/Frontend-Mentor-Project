@@ -138,6 +138,31 @@ function ProjectCard() {
     });
   }, [searchQuery, selectedDifficulty, selectedTech]);
 
+    const stats = useMemo(() => {
+    const totalCompleted = projects.length;
+    const totalGoal = 122; // Belirttiğin hedef sayı
+    
+    // Zorluk seviyesi dağılımı
+    const difficultyCounts = projects.reduce((acc: any, p) => {
+      acc[p.difficulty] = (acc[p.difficulty] || 0) + 1;
+      return acc;
+    }, {});
+
+    // Teknoloji kullanımı (En çok kullanılan ilk 4-5 tanesi)
+    const techCounts = projects.reduce((acc: any, p) => {
+      p.tags.forEach(tag => {
+        acc[tag] = (acc[tag] || 0) + 1;
+      });
+      return acc;
+    }, {});
+
+    const sortedTech = Object.entries(techCounts)
+      .sort(([, a]: any, [, b]: any) => b - a)
+      .slice(0, 4);
+
+    return { totalCompleted, totalGoal, difficultyCounts, sortedTech };
+  }, [projects]);
+
   const resetFilters = () => {
     setSearchQuery("");
     setSelectedDifficulty("All");
@@ -159,6 +184,66 @@ function ProjectCard() {
           A collection of designs I've solved on Frontend Mentor. 
         </p>
       </header>
+
+      {/* PROGRESS TRACKER DASHBOARD */}
+<section className="container px-4 mb-8 mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    {/* 1. Overall Progress Card */}
+    <div className="p-6 border rounded-xl bg-neutral-900/40 border-neutral-800 flex flex-col justify-center">
+      <div className="flex justify-between items-end mb-4">
+        <div>
+          <p className="text-neutral-500 text-xs uppercase tracking-widest font-bold">Total Progress</p>
+          <h3 className="text-4xl font-black text-white mt-1">{stats.totalCompleted} <span className="text-neutral-600 text-xl">/ {stats.totalGoal}</span></h3>
+        </div>
+        <div className="text-indigo-400 font-mono text-sm">
+          {Math.round((stats.totalCompleted / stats.totalGoal) * 100)}%
+        </div>
+      </div>
+      <div className="w-full bg-neutral-800 h-2 rounded-full overflow-hidden">
+        <div 
+          className="bg-indigo-500 h-full transition-all duration-1000 ease-out" 
+          style={{ width: `${(stats.totalCompleted / stats.totalGoal) * 100}%` }}
+        />
+      </div>
+    </div>
+
+    {/* 2. Difficulty Distribution */}
+    <div className="p-6 border rounded-xl bg-neutral-900/40 border-neutral-800">
+      <p className="text-neutral-500 text-xs uppercase tracking-widest font-bold mb-4">Challenge Levels</p>
+      <div className="grid grid-cols-2 gap-4">
+        {['Junior', 'Intermediate', 'Advanced'].map((level) => (
+          <div key={level} className="flex flex-col">
+            <span className="text-neutral-400 text-xs">{level}</span>
+            <span className="text-white font-bold">{stats.difficultyCounts[level] || 0}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* 3. Tech Stack Distribution */}
+    <div className="p-6 border rounded-xl bg-neutral-900/40 border-neutral-800">
+      <p className="text-neutral-500 text-xs uppercase tracking-widest font-bold mb-3">Top Technologies</p>
+      <div className="space-y-3">
+        {stats.sortedTech.map(([tech, count]: any) => (
+          <div key={tech} className="space-y-1">
+            <div className="flex justify-between text-[10px] uppercase tracking-tighter">
+              <span className="text-neutral-300">{tech}</span>
+              <span className="text-neutral-500">{Math.round((count / stats.totalCompleted) * 100)}%</span>
+            </div>
+            <div className="w-full bg-neutral-800 h-1 rounded-full overflow-hidden">
+              <div 
+                className="bg-neutral-400 h-full transition-all duration-1000" 
+                style={{ width: `${(count / stats.totalCompleted) * 100}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* FILTER CONTROL PANEL */}
       <section className="container px-4 mb-12 mx-auto">
