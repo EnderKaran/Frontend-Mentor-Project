@@ -1,12 +1,11 @@
 import { useState, useMemo } from "react";
-import { Github, Eye, Code2, Search, Filter, X, Lightbulb } from "lucide-react";
+import { Github, Eye, Code2, Search,Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom"; 
 import { motion, AnimatePresence } from "framer-motion";
 
 import {
   Card,
-  CardContent,
-  CardDescription,
+
   CardFooter,
   CardHeader,
   CardTitle,
