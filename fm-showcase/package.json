@@ -37,6 +37,8 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
@@ -52,12 +54,17 @@
     "vite": "npm:rolldown-vite@7.2.5"
   },
   "lint-staged": {
-  "src/**/*.{ts,tsx}": [
-    "eslint --fix",
-    "prettier --write"
-  ],
-  "src/**/*.css": [
-    "prettier --write"
-  ]
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.css": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+  "commitizen": {
+    "path": "cz-conventional-changelog"
+  }
 }
 }
