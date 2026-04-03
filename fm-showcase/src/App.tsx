@@ -12,6 +12,7 @@ import LaunchCountdown from "./challenges/Launch-countdown-timer/LaunchCountdown
 import CalculatorApp from "./challenges/calculator-app/CalculatorApp";
 
 import RoomHomepage from "./challenges/room-homepage/RoomHomepage";
+import IPTracker from "./challenges/ip-address-tracker/IPTracker";
 
 // Multi-step Form Components
 import MultiStepForm from "./challenges/multi-step-form/MultiStepForm";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/challenges/interactive-comments" element={<InteractiveComments />} />
         <Route path="/challenges/launch-countdown" element={<LaunchCountdown />} />
         <Route path="/challenges/calculator" element={<CalculatorApp />} />
+        <Route path="/challenges/ip-address-tracker" element={<IPTracker />} />
         
         {/* Room Homepage Rotası */}
         <Route path="/challenges/room-homepage" element={<RoomHomepage />} />

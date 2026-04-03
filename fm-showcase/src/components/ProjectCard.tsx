@@ -28,6 +28,7 @@ import launchCountdownImage from "../challenges/launch-countdown-timer/launch-co
 import calculatorAppImage from "../challenges/calculator-app/preview.webp";
 import multistepformAppImage from "../challenges/multi-step-form/preview.webp";
 import RoomHomePageAppImage from "../challenges/room-homepage/preview.webp";
+import ipTrackerImage from "../challenges/ip-address-tracker/preview.jpg";
 
 const projects = [
   { 
@@ -126,6 +127,17 @@ const projects = [
     image: RoomHomePageAppImage, 
     tags: ["React", "CSS Grid", "A11y"], 
     internalLink: "/challenges/room-homepage", 
+    repoLink: "#", 
+    difficulty: "Intermediate" 
+  },
+    { 
+    id: 10, 
+    title: "IP Address Tracker", 
+    description: "Real-time IP and domain tracking app with interactive maps.", 
+    lessons: "Handling async IP geolocation data and third-party map integration.", 
+    image: ipTrackerImage, 
+    tags: ["React", "API", "Leaflet"], 
+    internalLink: "/challenges/ip-address-tracker", 
     repoLink: "#", 
     difficulty: "Intermediate" 
   }

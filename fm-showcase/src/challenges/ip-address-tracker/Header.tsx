@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import arrowIcon from "./images/icon-arrow.svg";
+import patternBgMobile from "./images/pattern-bg-mobile.png";
+import patternBgDesktop from "./images/pattern-bg-desktop.png";
 
 interface HeaderProps {
   onSearch: (value: string) => void;
@@ -7,6 +9,16 @@ interface HeaderProps {
 
 export default function Header({ onSearch }: HeaderProps) {
   const [query, setQuery] = useState("");
+  const [bgImage, setBgImage] = useState(patternBgDesktop);
+
+  useEffect(() => {
+    const updateBackground = () => {
+      setBgImage(window.innerWidth < 768 ? patternBgMobile : patternBgDesktop);
+    };
+    updateBackground();
+    window.addEventListener("resize", updateBackground);
+    return () => window.removeEventListener("resize", updateBackground);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,7 +28,14 @@ export default function Header({ onSearch }: HeaderProps) {
   };
 
   return (
-    <header className="relative h-[300px] md:h-[280px] bg-[url('./images/pattern-bg-mobile.png')] md:bg-[url('./images/pattern-bg-desktop.png')] bg-cover bg-center p-6 flex flex-col items-center z-20">
+    <header 
+      className="relative h-[300px] md:h-[280px] bg-cover bg-center p-6 flex flex-col items-center z-20"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <h1 className="text-white text-2xl md:text-3xl font-medium mb-7">
         IP Address Tracker
       </h1>
