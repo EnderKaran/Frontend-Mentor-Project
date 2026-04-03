@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import {
   Card,
-
   CardFooter,
   CardHeader,
   CardTitle,
@@ -149,7 +148,7 @@ function ProjectCard() {
     const difficultyCounts = projects.reduce((acc: any, p) => { acc[p.difficulty] = (acc[p.difficulty] || 0) + 1; return acc; }, {});
     const techCounts = projects.reduce((acc: any, p) => { p.tags.forEach(tag => { acc[tag] = (acc[tag] || 0) + 1; }); return acc; }, {});
     const sortedTech = Object.entries(techCounts).sort(([, a]: any, [, b]: any) => b - a).slice(0, 4);
-    return { totalCompleted, totalGoal: 122, difficultyCounts, sortedTech };
+    return { totalCompleted, totalGoal: 125, difficultyCounts, sortedTech };
   }, []);
 
   const filteredProjects = useMemo(() => {
