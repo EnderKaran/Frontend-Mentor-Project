@@ -150,7 +150,7 @@ const projects = [
   image: jobListingsImage,
   tags: ["React", "Tailwind CSS", "JSON"], 
   internalLink: "/challenges/job-listings", 
-  repoLink: "#", 
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/job-listings", 
   difficulty: "Intermediate" 
 }
 ];
