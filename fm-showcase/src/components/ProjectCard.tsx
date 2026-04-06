@@ -29,6 +29,7 @@ import calculatorAppImage from "../challenges/calculator-app/preview.webp";
 import multistepformAppImage from "../challenges/multi-step-form/preview.webp";
 import RoomHomePageAppImage from "../challenges/room-homepage/preview.webp";
 import ipTrackerImage from "../challenges/ip-address-tracker/preview.jpg";
+import jobListingsImage from "../challenges/job-listings/preview.jpg"
 
 const projects = [
   { 
@@ -39,7 +40,7 @@ const projects = [
     image: introSectionImage, 
     tags: ["React", "Tailwind", "Navigation"], 
     internalLink: "/challenges/intro-section", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/intro-section", 
     difficulty: "Junior" 
   },
   { 
@@ -50,7 +51,7 @@ const projects = [
     image: typingSectionImage, 
     tags: ["React", "State Logic", "Algorithms"], 
     internalLink: "/challenges/typing-speed-test", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/typing-speed-test", 
     difficulty: "Junior" 
   },
   { 
@@ -61,7 +62,7 @@ const projects = [
     image: WeatherSectionImage, 
     tags: ["React", "API", "Tailwind"], 
     internalLink: "/challenges/weather-app", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/weather-app", 
     difficulty: "Intermediate" 
   },
   { 
@@ -72,7 +73,7 @@ const projects = [
     image: ExtensionSectionImage, 
     tags: ["React", "Dark Mode", "CRUD"], 
     internalLink: "/challenges/extension-manager", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/extension-manager", 
     difficulty: "Junior" 
   },
   { 
@@ -83,7 +84,7 @@ const projects = [
     image: CommentsSectionImage, 
     tags: ["React", "Nested State", "LocalStorage"], 
     internalLink: "/challenges/interactive-comments", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/interactive-comments", 
     difficulty: "Intermediate" 
   },
   { 
@@ -94,7 +95,7 @@ const projects = [
     image: launchCountdownImage, 
     tags: ["React", "CSS 3D", "Time Logic"], 
     internalLink: "/challenges/launch-countdown", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/Launch-countdown-timer", 
     difficulty: "Intermediate" 
   },
   { 
@@ -105,7 +106,7 @@ const projects = [
     image: calculatorAppImage, 
     tags: ["React", "useReducer", "A11y"], 
     internalLink: "/challenges/calculator", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/calculator-app", 
     difficulty: "Intermediate" 
   },
   { 
@@ -116,7 +117,7 @@ const projects = [
     image: multistepformAppImage, 
     tags: ["React", "Context API", "Validation"], 
     internalLink: "/challenges/multi-step-form", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/multi-step-form", 
     difficulty: "Advanced" 
   },
   { 
@@ -127,7 +128,7 @@ const projects = [
     image: RoomHomePageAppImage, 
     tags: ["React", "CSS Grid", "A11y"], 
     internalLink: "/challenges/room-homepage", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/room-homepage", 
     difficulty: "Intermediate" 
   },
     { 
@@ -138,9 +139,20 @@ const projects = [
     image: ipTrackerImage, 
     tags: ["React", "API", "Leaflet"], 
     internalLink: "/challenges/ip-address-tracker", 
-    repoLink: "#", 
+    repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/ip-address-tracker", 
     difficulty: "Intermediate" 
-  }
+  },
+  { 
+  id: 11, 
+  title: "Job Listings with Filtering", 
+  description: "Dynamic job board with a complex multi-tag filtering system.", 
+  lessons: "Advanced array filtering (AND logic) and mobile-first responsive component architecture.", 
+  image: jobListingsImage,
+  tags: ["React", "Tailwind CSS", "JSON"], 
+  internalLink: "/challenges/job-listings", 
+  repoLink: "#", 
+  difficulty: "Intermediate" 
+}
 ];
 
 function ProjectCard() {

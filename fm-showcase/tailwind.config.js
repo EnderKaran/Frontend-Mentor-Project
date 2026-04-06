@@ -13,36 +13,40 @@ export default {
           dmsans: ['DM Sans', 'sans-serif'], 
           bricolage: ['Bricolage Grotesque', 'sans-serif'],
           noto: ['Noto Sans', 'sans-serif'],
-          spartan: ['League Spartan', 'sans-serif'],
+          spartan: ['League Spartan', 'sans-serif'], // Job Listings Ana Fontu
         },
         colors: {
+          // --- JOB LISTINGS PROJESİ RENKLERİ ---
+          'job-primary': 'hsl(180, 29%, 50%)',   // Green 400
+          'job-bg': 'hsl(180, 52%, 96%)',        // Green 50 (Background)
+          'job-gray': 'hsl(180, 8%, 52%)',      // Gray 400
+          'job-dark': 'hsl(180, 14%, 20%)',      // Green 900
 
+          // --- DİĞER PROJELERİNİN RENKLERİ ---
           'room-grey-500': 'hsl(0, 0%, 63%)',
           'room-grey-800': 'hsl(0, 0%, 27%)',
           'room-black': 'hsl(0, 0%, 0%)',
           
-          'ty-black': '#0E0E0E',       // Arka plan
-          'ty-gray-dark': '#1C1C1C',   // Kart arka planı
-          'ty-gray': '#757575',        // Pasif metinler
-          'ty-gray-light': '#A3A3A3',  // Okunabilir metinler
-          'ty-primary': '#FACC15',     // SARI (Vurgu rengi)
+          'ty-black': '#0E0E0E',
+          'ty-gray-dark': '#1C1C1C',
+          'ty-gray': '#757575',
+          'ty-gray-light': '#A3A3A3',
+          'ty-primary': '#FACC15',
 
-          'weather-bg': 'hsl(243, 96%, 9%)',        // Ana Arka Plan (Neutral 900)
-          'weather-card': 'hsl(243, 27%, 20%)',     // Kartlar (Neutral 800)
-          'weather-input': 'hsl(243, 23%, 24%)',    // Input & Hover (Neutral 700)
-          'weather-secondary': 'hsl(243, 23%, 30%)', // Detaylar (Neutral 600)
-          'weather-text-gray': 'hsl(240, 6%, 70%)', // Gri Yazılar (Neutral 300)
-          'weather-button': 'hsl(233, 67%, 56%)',   // Mavi Buton (Blue 500)
-          'weather-accent': 'hsl(28, 100%, 52%)',   // Turuncu Aksan (Orange 500)
+          'weather-bg': 'hsl(243, 96%, 9%)',
+          'weather-card': 'hsl(243, 27%, 20%)',
+          'weather-input': 'hsl(243, 23%, 24%)',
+          'weather-secondary': 'hsl(243, 23%, 30%)',
+          'weather-text-gray': 'hsl(240, 6%, 70%)',
+          'weather-button': 'hsl(233, 67%, 56%)',
+          'weather-accent': 'hsl(28, 100%, 52%)',
 
-          // Neutral Renkler
           'ext-900': 'hsl(227, 75%, 14%)',
           'ext-800': 'hsl(226, 25%, 17%)',
           'ext-700': 'hsl(225, 23%, 24%)',
           'ext-600': 'hsl(226, 11%, 37%)',
           'ext-200': 'hsl(217, 61%, 90%)',
           'ext-0': 'hsl(200, 60%, 99%)',
-          // Vurgu Rengi
           'ext-red': 'hsl(3, 71%, 56%)',
 
           'mod-purple': '#5357b6',
@@ -95,10 +99,10 @@ export default {
           'ext-dark-grad': 'linear-gradient(180deg, #040918 0%, #091540 100%)',
         },
         fontWeight: {
-        medium: 500,
-        semibold: 600,
-        bold: 700,
-      }
+          medium: 500, // Spartan Medium
+          semibold: 600,
+          bold: 700,   // Spartan Bold
+        }
       },
     },
     plugins: [require("tailwindcss-animate")],

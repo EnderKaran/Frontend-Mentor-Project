@@ -13,38 +13,38 @@ import CalculatorApp from "./challenges/calculator-app/CalculatorApp";
 
 import RoomHomepage from "./challenges/room-homepage/RoomHomepage";
 import IPTracker from "./challenges/ip-address-tracker/IPTracker";
+import JobBoard from "./challenges/job-listings/JobBoard";
 
-// Multi-step Form Components
 import MultiStepForm from "./challenges/multi-step-form/MultiStepForm";
 import { FormProvider } from "./context/FormContext";
 
 function App() {
   return (
-    <div className="min-h-screen bg-neutral-950"> 
-      <Routes>
-        <Route path="/" element={<ProjectCard />} />
-        <Route path="/challenges/intro-section" element={<IntroSection />} />
-        <Route path="/challenges/typing-speed-test" element={<TypingTest />} />
-        <Route path="/challenges/weather-app" element={<WeatherApp />} />
-        <Route path="/challenges/extension-manager" element={<ExtensionManager />} />
-        <Route path="/challenges/interactive-comments" element={<InteractiveComments />} />
-        <Route path="/challenges/launch-countdown" element={<LaunchCountdown />} />
-        <Route path="/challenges/calculator" element={<CalculatorApp />} />
-        <Route path="/challenges/ip-address-tracker" element={<IPTracker />} />
-        
-        {/* Room Homepage Rotası */}
-        <Route path="/challenges/room-homepage" element={<RoomHomepage />} />
+    <Routes>
+      <Route path="/" element={<div className="min-h-screen bg-neutral-950"><ProjectCard /></div>} />
+      <Route path="/challenges/intro-section" element={<div className="min-h-screen bg-neutral-950"><IntroSection /></div>} />
+      <Route path="/challenges/typing-speed-test" element={<div className="min-h-screen bg-neutral-950"><TypingTest /></div>} />
+      <Route path="/challenges/weather-app" element={<div className="min-h-screen bg-neutral-950"><WeatherApp /></div>} />
+      <Route path="/challenges/extension-manager" element={<div className="min-h-screen bg-neutral-950"><ExtensionManager /></div>} />
+      <Route path="/challenges/interactive-comments" element={<div className="min-h-screen bg-neutral-950"><InteractiveComments /></div>} />
+      <Route path="/challenges/launch-countdown" element={<div className="min-h-screen bg-neutral-950"><LaunchCountdown /></div>} />
+      <Route path="/challenges/calculator" element={<div className="min-h-screen bg-neutral-950"><CalculatorApp /></div>} />
+      <Route path="/challenges/ip-address-tracker" element={<div className="min-h-screen bg-neutral-950"><IPTracker /></div>} />
+      
+      <Route path="/challenges/room-homepage" element={<div className="min-h-screen bg-neutral-950"><RoomHomepage /></div>} />
+      <Route path="/challenges/job-listings" element={<JobBoard />} />
 
-        <Route 
-          path="/challenges/multi-step-form" 
-          element={
+      <Route 
+        path="/challenges/multi-step-form" 
+        element={
+          <div className="min-h-screen bg-neutral-950">
             <FormProvider>
               <MultiStepForm />
             </FormProvider>
-          } 
-        />
-      </Routes>
-    </div>
+          </div>
+        } 
+      />
+    </Routes>
   );
 }
 
