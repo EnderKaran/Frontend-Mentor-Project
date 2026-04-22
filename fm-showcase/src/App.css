@@ -69,6 +69,19 @@
 /*  CSS Değişkenleri */
 @layer base {
   :root {
+
+    /* --- INTERACTIVE PRICING COLORS --- */
+    --price-green-100: hsl(174, 77%, 80%);       /* Slider bar & Soft Highlights */
+    --price-green-400: hsl(174, 86%, 45%);       /* Slider Track & Active Toggle */
+    --price-orange-100: hsl(0, 89%, 96%);        /* Discount Badge Background */
+    --price-orange-400: hsl(15, 100%, 70%);      /* Discount Badge Text */
+    --price-indigo-200: hsl(226, 100%, 87%);     /* CTA Button Hover Text */
+    
+    --price-slate-50: hsl(230, 100%, 99%);       /* Main Page Background */
+    --price-slate-200: hsl(224, 65%, 95%);       /* Empty Slider Track */
+    --price-slate-300: hsl(223, 50%, 87%);       /* Toggle Inactive Background */
+    --price-slate-400: hsl(225, 20%, 60%);       /* Standard Body Text */
+    --price-slate-800: hsl(227, 35%, 25%);
     /* -- Radius Ayarları -- */
     --radius: 0.625rem;
     --radius-sm: calc(var(--radius) - 4px);
@@ -218,6 +231,8 @@
     --calc-text-keys: hsl(52, 100%, 62%);
     --calc-text-accent: hsl(198, 20%, 13%);
   }
+
+  
 
 }
 

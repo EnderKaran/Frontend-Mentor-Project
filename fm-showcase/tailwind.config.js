@@ -26,6 +26,10 @@ export default {
           'room-grey-500': 'hsl(0, 0%, 63%)',
           'room-grey-800': 'hsl(0, 0%, 27%)',
           'room-black': 'hsl(0, 0%, 0%)',
+
+          'price-green': 'var(--price-green-400)',
+          'price-bg': 'var(--price-slate-50)',
+          'price-text': 'var(--price-slate-800)',
           
           'ty-black': '#0E0E0E',
           'ty-gray-dark': '#1C1C1C',

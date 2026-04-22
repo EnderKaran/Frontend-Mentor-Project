@@ -15,6 +15,9 @@ import RoomHomepage from "./challenges/room-homepage/RoomHomepage";
 import IPTracker from "./challenges/ip-address-tracker/IPTracker";
 import JobBoard from "./challenges/job-listings/JobBoard";
 
+// Yeni Proje Importu
+import PricingCard from "./challenges/interactive-pricing-component/PricingCard";
+
 import MultiStepForm from "./challenges/multi-step-form/MultiStepForm";
 import { FormProvider } from "./context/FormContext";
 
@@ -33,6 +36,17 @@ function App() {
       
       <Route path="/challenges/room-homepage" element={<div className="min-h-screen bg-neutral-950"><RoomHomepage /></div>} />
       <Route path="/challenges/job-listings" element={<JobBoard />} />
+
+      {/* Yeni Proje Route Tanımı */}
+      <Route 
+        path="/challenges/interactive-pricing-component" 
+        element={
+          
+          <div className="min-h-screen bg-[var(--price-slate-50)] flex items-center justify-center p-4">
+            <PricingCard />
+          </div>
+        } 
+      />
 
       <Route 
         path="/challenges/multi-step-form" 
