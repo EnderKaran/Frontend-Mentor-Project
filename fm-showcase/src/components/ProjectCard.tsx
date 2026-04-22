@@ -30,6 +30,7 @@ import multistepformAppImage from "../challenges/multi-step-form/preview.webp";
 import RoomHomePageAppImage from "../challenges/room-homepage/preview.webp";
 import ipTrackerImage from "../challenges/ip-address-tracker/preview.jpg";
 import jobListingsImage from "../challenges/job-listings/preview.jpg"
+import pricingComponentImage from "../challenges/interactive-pricing-component/preview.jpg";
 
 const projects = [
   { 
@@ -152,6 +153,17 @@ const projects = [
   internalLink: "/challenges/job-listings", 
   repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/job-listings", 
   difficulty: "Intermediate" 
+},
+{ 
+  id: 12, 
+  title: "Interactive Pricing Component", 
+  description: "Traffic-based pricing calculator with a custom range slider and billing toggle logic.", 
+  lessons: "Customizing range input styles and synchronizing state across multiple pricing tiers with discount logic.", 
+  image: pricingComponentImage, 
+  tags: ["React", "TypeScript", "Tailwind CSS"], 
+  internalLink: "/challenges/interactive-pricing-component", 
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/interactive-pricing-component", 
+  difficulty: "Junior" 
 }
 ];
 
