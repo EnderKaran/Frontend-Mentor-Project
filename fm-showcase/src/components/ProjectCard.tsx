@@ -18,7 +18,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-// Görsel importları...
 import introSectionImage from "../challenges/intro-section/intro-section-images/desktop-design.jpg";
 import typingSectionImage from "../challenges/typing-speed-test/typing-test-images/preview.jpg";
 import WeatherSectionImage from "../challenges/weather-app/weather-app-image/preview.webp";
@@ -31,6 +30,8 @@ import RoomHomePageAppImage from "../challenges/room-homepage/preview.webp";
 import ipTrackerImage from "../challenges/ip-address-tracker/preview.jpg";
 import jobListingsImage from "../challenges/job-listings/preview.jpg"
 import pricingComponentImage from "../challenges/interactive-pricing-component/preview.jpg";
+import productPageImage from "../challenges/ecommerce-product-page/preview.jpg";
+
 
 const projects = [
   { 
@@ -164,6 +165,17 @@ const projects = [
   internalLink: "/challenges/interactive-pricing-component", 
   repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/interactive-pricing-component", 
   difficulty: "Junior" 
+},
+{ 
+  id: 13, 
+  title: "E-commerce product page", 
+  description: "A professional product page featuring a multi-functional image gallery, lightbox modal, and a fully reactive shopping cart system.",
+  lessons: "Implementing global state management with Context API for cart operations and building a complex responsive image gallery with lightbox functionality.",
+  image: productPageImage, 
+  tags: ["React", "TypeScript", "Context API", "Tailwind CSS"],
+  internalLink: "/challenges/ecommerce-product-page", 
+  repoLink: "https://github.com/EnderKaran/Frontend-Mentor-Project/tree/main/fm-showcase/src/challenges/ecommerce-product-page", 
+  difficulty: "Intermediate"
 }
 ];
 

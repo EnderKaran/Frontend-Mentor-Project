@@ -10,15 +10,16 @@ import ExtensionManager from "./challenges/extension-manager/ExtensionManager";
 import InteractiveComments from "./challenges/interactive-comments/InteractiveComments";
 import LaunchCountdown from "./challenges/Launch-countdown-timer/LaunchCountdown";
 import CalculatorApp from "./challenges/calculator-app/CalculatorApp";
-
 import RoomHomepage from "./challenges/room-homepage/RoomHomepage";
 import IPTracker from "./challenges/ip-address-tracker/IPTracker";
 import JobBoard from "./challenges/job-listings/JobBoard";
-
-// Yeni Proje Importu
 import PricingCard from "./challenges/interactive-pricing-component/PricingCard";
-
 import MultiStepForm from "./challenges/multi-step-form/MultiStepForm";
+
+// E-commerce Product Page Importları
+import ProductPage from "./challenges/ecommerce-product-page/ProductPage";
+import { CartProvider } from "./context/CartContext";
+
 import { FormProvider } from "./context/FormContext";
 
 function App() {
@@ -33,18 +34,24 @@ function App() {
       <Route path="/challenges/launch-countdown" element={<div className="min-h-screen bg-neutral-950"><LaunchCountdown /></div>} />
       <Route path="/challenges/calculator" element={<div className="min-h-screen bg-neutral-950"><CalculatorApp /></div>} />
       <Route path="/challenges/ip-address-tracker" element={<div className="min-h-screen bg-neutral-950"><IPTracker /></div>} />
-      
       <Route path="/challenges/room-homepage" element={<div className="min-h-screen bg-neutral-950"><RoomHomepage /></div>} />
       <Route path="/challenges/job-listings" element={<JobBoard />} />
 
-      {/* Yeni Proje Route Tanımı */}
       <Route 
         path="/challenges/interactive-pricing-component" 
         element={
-          
           <div className="min-h-screen bg-[var(--price-slate-50)] flex items-center justify-center p-4">
             <PricingCard />
           </div>
+        } 
+      />
+
+      <Route 
+        path="/challenges/ecommerce-product-page" 
+        element={
+          <CartProvider>
+            <ProductPage />
+          </CartProvider>
         } 
       />
 
