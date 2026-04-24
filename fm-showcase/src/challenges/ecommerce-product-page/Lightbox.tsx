@@ -1,10 +1,19 @@
 import { useState } from "react";
 
+import productImage1 from "./images/image-product-1.jpg";
+import productImage2 from "./images/image-product-2.jpg";
+import productImage3 from "./images/image-product-3.jpg";
+import productImage4 from "./images/image-product-4.jpg";
+import thumbnailImage1 from "./images/image-product-1-thumbnail.jpg";
+import thumbnailImage2 from "./images/image-product-2-thumbnail.jpg";
+import thumbnailImage3 from "./images/image-product-3-thumbnail.jpg";
+import thumbnailImage4 from "./images/image-product-4-thumbnail.jpg";
+
 const images = [
-  { id: 1, main: "/images/image-product-1.jpg", thumb: "/images/image-product-1-thumbnail.jpg" },
-  { id: 2, main: "/images/image-product-2.jpg", thumb: "/images/image-product-2-thumbnail.jpg" },
-  { id: 3, main: "/images/image-product-3.jpg", thumb: "/images/image-product-3-thumbnail.jpg" },
-  { id: 4, main: "/images/image-product-4.jpg", thumb: "/images/image-product-4-thumbnail.jpg" },
+  { id: 1, main: productImage1, thumb: thumbnailImage1 },
+  { id: 2, main: productImage2, thumb: thumbnailImage2 },
+  { id: 3, main: productImage3, thumb: thumbnailImage3 },
+  { id: 4, main: productImage4, thumb: thumbnailImage4 },
 ];
 
 interface LightboxProps {

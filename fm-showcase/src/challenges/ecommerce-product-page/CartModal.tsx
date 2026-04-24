@@ -1,5 +1,7 @@
 import { useCart } from "@/context/CartContext";
 
+import iconDeleteImage from "./images/icon-delete.svg"
+
 export default function CartModal() {
   const { cartItems, removeFromCart } = useCart();
 
@@ -40,7 +42,7 @@ export default function CartModal() {
                     onClick={() => removeFromCart(item.id)}
                     className="hover:opacity-70 transition-opacity"
                   >
-                    <img src="/images/icon-delete.svg" alt="Delete item" />
+                    <img src={iconDeleteImage} alt="Delete item" />
                   </button>
                 </div>
               ))}

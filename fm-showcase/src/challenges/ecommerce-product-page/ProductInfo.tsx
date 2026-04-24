@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 
+import thumbnailImage1 from "./images/image-product-1-thumbnail.jpg";
+import iconMinusImage from "./images/icon-minus.svg";
+import iconPlusImage from "./images/icon-plus.svg";
+import iconCartImage from "./images/icon-cart.svg";
+
+
 export default function ProductInfo() {
   const { addToCart } = useCart();
   
@@ -15,7 +21,7 @@ export default function ProductInfo() {
     price: 125.00,
     originalPrice: 250.00,
     discount: 50,
-    image: "/images/image-product-1-thumbnail.jpg"
+    image: thumbnailImage1
   };
 
   const handleIncrement = () => setQuantity(prev => prev + 1);
@@ -30,7 +36,6 @@ export default function ProductInfo() {
         quantity: quantity,
         image: product.image
       });
-      // Eklendikten sonra yerel sayacı sıfırlayabiliriz
       setQuantity(0);
     }
   };
@@ -72,11 +77,11 @@ export default function ProductInfo() {
         {/* Adet Seçici */}
         <div className="flex items-center justify-between bg-light-grayish-blue rounded-lg px-4 py-4 md:w-1/3">
           <button onClick={handleDecrement} className="hover:opacity-60 transition-opacity">
-            <img src="/images/icon-minus.svg" alt="Decrease" />
+            <img src={iconMinusImage} alt="Decrease" />
           </button>
           <span className="font-bold text-very-dark-blue">{quantity}</span>
           <button onClick={handleIncrement} className="hover:opacity-60 transition-opacity">
-            <img src="/images/icon-plus.svg" alt="Increase" />
+            <img src={iconPlusImage} alt="Increase" />
           </button>
         </div>
 
@@ -86,7 +91,7 @@ export default function ProductInfo() {
           disabled={quantity === 0}
           className="flex-1 bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-4 shadow-lg shadow-orange-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <img src="/images/icon-cart.svg" alt="" className="brightness-0 invert h-4" />
+          <img src={iconCartImage} alt="" className="brightness-0 invert h-4" />
           Add to cart
         </button>
       </div>

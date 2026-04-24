@@ -1,11 +1,24 @@
 import { useState } from "react";
 
+import productImage1 from "./images/image-product-1.jpg";
+import productImage2 from "./images/image-product-2.jpg";
+import productImage3 from "./images/image-product-3.jpg";
+import productImage4 from "./images/image-product-4.jpg";
+import thumbnailImage1 from "./images/image-product-1-thumbnail.jpg";
+import thumbnailImage2 from "./images/image-product-2-thumbnail.jpg";
+import thumbnailImage3 from "./images/image-product-3-thumbnail.jpg";
+import thumbnailImage4 from "./images/image-product-4-thumbnail.jpg";
+
+import iconPrevious from "./images/icon-previous.svg";
+import iconNext from "./images/icon-next.svg";
+
+
 // Ürün görselleri dizisi
 const images = [
-  { id: 1, main: "/images/image-product-1.jpg", thumb: "/images/image-product-1-thumbnail.jpg" },
-  { id: 2, main: "/images/image-product-2.jpg", thumb: "/images/image-product-2-thumbnail.jpg" },
-  { id: 3, main: "/images/image-product-3.jpg", thumb: "/images/image-product-3-thumbnail.jpg" },
-  { id: 4, main: "/images/image-product-4.jpg", thumb: "/images/image-product-4-thumbnail.jpg" },
+  { id: 1, main: productImage1, thumb: thumbnailImage1 },
+  { id: 2, main: productImage2, thumb: thumbnailImage2 },
+  { id: 3, main: productImage3, thumb: thumbnailImage3 },
+  { id: 4, main: productImage4, thumb: thumbnailImage4 },
 ];
 
 interface GalleryProps {
@@ -41,13 +54,13 @@ export default function ProductGallery({ handleLightbox }: GalleryProps) {
             onClick={prevImage}
             className="bg-white w-10 h-10 rounded-full flex items-center justify-center hover:text-orange-500 transition-colors"
           >
-            <img src="/images/icon-previous.svg" alt="Previous" className="h-3" />
+            <img src={iconPrevious} alt="Previous" className="h-3" />
           </button>
           <button 
             onClick={nextImage}
             className="bg-white w-10 h-10 rounded-full flex items-center justify-center hover:text-orange-500 transition-colors"
           >
-            <img src="/images/icon-next.svg" alt="Next" className="h-3" />
+            <img src={iconNext} alt="Next" className="h-3" />
           </button>
         </div>
       </div>
